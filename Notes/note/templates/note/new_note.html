@@ -1,0 +1,29 @@
+{% extends 'note/base.html' %}
+
+{% load static %}
+{% csrf_token %}
+{% block content %}
+
+  <div class="container">
+
+    <div class="create_note_form">
+
+      {% if user.is_authenticated %}
+        <div class="card">
+          <p class="title_card">Title</p>
+          <p class="pre_text"></p>
+
+        </div>
+      {% else %}
+      <div class="card">
+        <p class="title_card">You need to log in</p>
+        <p class="pre_text"></p>
+
+      </div>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+{% endblock %}

@@ -1,5 +1,154 @@
+html{
+  height: 100%;
+  margin: 0;
+}
+.body{
+  font-family: monospace;
+  color: white;
+  font-weight: lighter;
+  background-color: #323131;
+  margin: 0 auto;
+  align-items: center;
+  height: 100%;
+}
+.body::-webkit-scrollbar { width: 0; }
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 25px;
+}
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+.content{
+  width: 80%;
+  min-width: 600px;
+  height: 100%;
+  align-self: center;
+  margin: auto;
+}
+.header{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  height: 20%;
 
-.Text{
-  color:red;
-  font-size: 50px;
+
+}
+.logo{
+  margin: auto 5px ;
+  text-align: center;
+
+}
+.but{
+  margin:auto 5px;
+  height: 40px;
+  width: 80px;
+
+  text-align: center;
+  cursor: pointer;
+}
+.but:hover{
+  opacity: 0.5;
+}
+.container{
+  height: 80vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer{
+  height: 50px;
+  font-size: 17px;
+  margin-top: 100px;
+}
+.footer_t{
+  font-size: 17px;
+}
+.card{
+  position: relative;
+  cursor: pointer;
+  height: 80px;
+  width: 250px;
+  margin: auto;
+
+}
+.button_open{
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+  top: 75px;
+  left: 220px;
+  cursor: pointer;
+}
+.button_open:hover{
+  opacity: 0.5;
+}
+.title_card{
+  margin-top: 5px;
+  font-size: 25px;
+}
+.pre_text{
+  margin-top: 5px;
+  font-size: 15px;
+  height: 50%;
+  word-wrap: break-word;
+  position: absolute;
+  overflow: hidden;
+}
+.button_add{
+  position: absolute;
+  margin: auto;
+  right: 11%;
+  bottom: 11%;
+  width: 60px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 40px;
+  cursor: pointer;
+}
+.button_add:hover{
+  opacity: 0.5;
+}
+.menu{
+  display: none;
+  position: absolute;
+  right: 11%;
+  top: 12%;
+}
+.menu_elem{
+  cursor: pointer;
+  text-align: right;
+  margin-top: 10px;
+}
+.menu_elem:hover{
+  opacity: 0.5;
+}
+.note_window{
+  position: absolute;
+  right: 25%;
+  top: 15%;
+  height: 80vh;
+  width: 50vw;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  display: none;
+  padding-top: 40px;
+}
+.on_w{
+  margin-bottom: 30px;
+}
+.new_butt{
+  display: block;
+  height: 100%;
+  width: 100%;
+  align-self: center;
 }
