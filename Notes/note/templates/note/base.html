@@ -1,14 +1,65 @@
 <!DOCTYPE html>
 {% load static %}
+{% csrf_token %}
 <html lang="en" dir="ltr">
+
   <head>
     <meta charset="utf-8">
-    <title>Index </title>
+    <title>MyNote</title>
+    <link rel="" thref="/css/master.css">
     <link rel="stylesheet" type="text/css" href="{% static 'note/main.css' %}">
+
   </head>
-  <body>
-    <h1>Hello world</h1>
-    <br>
-    <h1 class="Text">index note</h1>
+
+  <body class="body">
+
+    <div class="content">
+
+      <div class="header">
+        <p class="logo">
+          <a class="new_butt" href="/">Note/</a>
+        </p>
+        <div class="but">
+          ...
+        </div>
+        <div class="menu">
+          {% if user.is_authenticated %}
+            <div class="menu_elem">
+              <a href="/">Profile</a>
+            </div>
+            <div class="menu_elem">
+              <a href="accounts/logout">Logout</a>
+            </div>
+            <div class="menu_elem">
+              <a class="new_butt" href="/">Info</a>
+            </div>
+          {% else %}
+            <div class="menu_elem">
+              <a class="new_butt" href="accounts/login/">Auth</a>
+            </div>
+            <div class="menu_elem">
+              <a href="accounts/logout">Join</a>
+            </div>
+            <div class="menu_elem">
+              <a class="new_butt" href="/">Info</a>
+            </div>
+          {% endif %}
+
+
+        </div>
+      </div>
+
+
+    {% block content %}
+    {% endblock %}
+
+
+    <div class="footer">
+      <p class="text footer_t">©2020 by <a class="footer_t" href="https://github.com/sergey-shk"> sergey-shk</a></p>
+    </div>
+
+    <script type="text/javascript" src="{% static 'note/main.js' %}"></script>
+    <script src="https://code.s3.yandex.net/web-code/smoothly.js"></script>
   </body>
+
 </html>

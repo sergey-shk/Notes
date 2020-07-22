@@ -1,0 +1,36 @@
+{% extends 'note/base.html' %}
+
+{% load static %}
+{% csrf_token %}
+{% block content %}
+
+  <div class="container">
+    {% if user.is_authenticated %}
+      {% for note in notes %}
+      <div class="card">
+        <p class="title_card">{{ note.title }}</p>
+        <p class="pre_text">{{ note.body }}</p>
+
+      </div>
+      {% endfor %}
+    {% else %}
+    <div class="card">
+      <p class="title_card">You need to log in</p>
+      <p class="pre_text"></p>
+
+    </div>
+    {% endif %}
+    <div class="button_add">
+      <a class="new_butt" href="/new">+</a>
+    </div>
+
+  </div>
+
+
+  <div class="note_window">
+    <p class="title_card on_w">{{ note.title }}</p>
+    <br>
+    <p class="pre_text on_w">{{ note.body }}</p>
+  </div>
+
+{% endblock %}
