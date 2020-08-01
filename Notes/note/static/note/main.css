@@ -152,3 +152,37 @@ a{
   width: 100%;
   align-self: center;
 }
+.log_form{
+  margin: 0 auto;
+  height: 80vh;
+}
+.log_inp{
+  opacity: 0.5;
+  color: black;
+}
+.show_b{
+  margin: auto;
+  height: 70vh;
+  width: 50vw;
+  position: absolute;
+  background: #242323;
+  opacity: 1;
+  z-index: 1000;
+}
+.edit_on_card{
+  display: block;
+  bottom: 5%;
+  right: 5%;
+  font-size: 12px;
+  opacity: 0.5;
+  margin-right: 5%;
+  margin-top: 5px;
+  height: 15px;
+
+  width: 100%;
+  text-align: right;
+}
+.post_form{
+  display: flex;
+  flex-direction: column;
+}

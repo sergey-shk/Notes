@@ -9,10 +9,13 @@
     <div class="create_note_form">
 
       {% if user.is_authenticated %}
-        <div class="card">
-          <p class="title_card">Title</p>
-          <p class="pre_text"></p>
-
+        <div class="new_note_p">
+          <h1>New note</h1>
+          <br>
+            <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Save</button>
+            </form>
         </div>
       {% else %}
       <div class="card">

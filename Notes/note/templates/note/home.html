@@ -10,7 +10,10 @@
       <div class="card">
         <p class="title_card">{{ note.title }}</p>
         <p class="pre_text">{{ note.body }}</p>
-
+        <br>
+        
+        <a href="{% url 'edit_note' pk=note.pk %}" class="edit_on_card">edit</a>
+        <a href="{% url 'delete_note' pk=note.pk %}" class="edit_on_card">delete</a>
       </div>
       {% endfor %}
     {% else %}
