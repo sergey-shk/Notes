@@ -6,9 +6,18 @@
   <head>
     <meta charset="utf-8">
     <title>MyNote</title>
-    <link rel="" thref="/css/master.css">
+
     <link rel="stylesheet" type="text/css" href="{% static 'note/main.css' %}">
 
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( "#datepicker" ).datepicker();
+      } );
+    </script>
   </head>
 
   <body class="body">
@@ -25,14 +34,12 @@
         <div class="menu">
           {% if user.is_authenticated %}
             <div class="menu_elem">
-              <a href="/">{{ user_name }}asd</a>
+              <a href="/">{{ user_name }}</a>
             </div>
             <div class="menu_elem">
               <a href="accounts/logout">Logout</a>
             </div>
-            <div class="menu_elem">
-              <a class="new_butt" href="/">Info</a>
-            </div>
+
           {% else %}
             <div class="menu_elem">
               <a class="new_butt" href="/accounts/login">Auth</a>
@@ -40,9 +47,7 @@
             <div class="menu_elem">
               <a href="/accounts/signup">Join</a>
             </div>
-            <div class="menu_elem">
-              <a class="new_butt" href="/">Info</a>
-            </div>
+          
           {% endif %}
 
 

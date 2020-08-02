@@ -10,18 +10,17 @@
       <div class="card">
         <p class="title_card">{{ note.title }}</p>
         <p class="pre_text">{{ note.body }}</p>
+        <p class="date_on_card">{{ note.date }}</p>
         <br>
-        
+
         <a href="{% url 'edit_note' pk=note.pk %}" class="edit_on_card">edit</a>
-        <a href="{% url 'delete_note' pk=note.pk %}" class="edit_on_card">delete</a>
+
+        <a href="{% url 'delete_note' pk=note.pk %}" class="edit_on_card del">delete</a>
+
       </div>
       {% endfor %}
     {% else %}
-    <div class="card">
-      <p class="title_card">You need to log in</p>
-      <p class="pre_text"></p>
-
-    </div>
+      <a class="not_login" href="accounts/login">you need to log in</a>
     {% endif %}
     <div class="button_add">
       <a class="new_butt" href="/new">+</a>

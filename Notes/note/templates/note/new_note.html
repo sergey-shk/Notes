@@ -10,19 +10,15 @@
 
       {% if user.is_authenticated %}
         <div class="new_note_p">
-          <h1>New note</h1>
+          <h1 class="title_new">New note</h1>
           <br>
-            <form method="POST" class="post-form">{% csrf_token %}
+            <form method="POST" class="post-form title_new">{% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit">Save</button>
+                <button type="submit" class="save_button">Save</button>
             </form>
         </div>
       {% else %}
-      <div class="card">
-        <p class="title_card">You need to log in</p>
-        <p class="pre_text"></p>
-
-      </div>
+        <a class="not_login" href="accounts/login">you need to log in</a>
       {% endif %}
 
     </div>

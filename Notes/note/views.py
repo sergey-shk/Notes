@@ -16,10 +16,11 @@ def index(request):
         return render(request, 'note/not_auth.html')
     else:
         user_notes = Note.objects.filter(author=request.user)
+        user_name = request.user.username;
 
         context = {
             'notes': user_notes,
-
+            'user_name': user_name,
         }
         return render(request, 'note/home.html', context)
 

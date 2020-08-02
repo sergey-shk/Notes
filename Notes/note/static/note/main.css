@@ -12,6 +12,9 @@ html{
   height: 100%;
 }
 .body::-webkit-scrollbar { width: 0; }
+.pre_text::-webkit-scrollbar{
+  width: 0;
+}
 *{
   box-sizing: border-box;
   margin: 0;
@@ -73,8 +76,8 @@ a{
 .card{
   position: relative;
   cursor: pointer;
-  height: 80px;
-  width: 250px;
+  height: 150px;
+  width: 280px;
   margin: auto;
 
 }
@@ -95,14 +98,15 @@ a{
 .title_card{
   margin-top: 5px;
   font-size: 25px;
+
 }
 .pre_text{
   margin-top: 5px;
   font-size: 15px;
-  height: 50%;
+  height: 60%;
+  color: rgba(255, 255, 255, 0.6);
   word-wrap: break-word;
-  position: absolute;
-  overflow: hidden;
+  overflow: scroll;
 }
 .button_add{
   position: absolute;
@@ -162,15 +166,19 @@ a{
 }
 .show_b{
   margin: auto;
-  height: 70vh;
-  width: 50vw;
+  height: 50vh;
+  width: 30vw;
   position: absolute;
   background: #242323;
   opacity: 1;
+  padding: 2%;
   z-index: 1000;
+  border-radius: 2%;
+
 }
 .edit_on_card{
   display: block;
+  position: absolute;
   bottom: 5%;
   right: 5%;
   font-size: 12px;
@@ -178,11 +186,54 @@ a{
   margin-right: 5%;
   margin-top: 5px;
   height: 15px;
-
   width: 100%;
   text-align: right;
+  margin-top: 5px;
+}
+.del{
+  right: 20%;
+}
+.date_on_card{
+  font-size: 12px;
+  opacity: 0.5;
+  position: absolute;
+  right: 5%;
+  bottom: 20%;
 }
 .post_form{
   display: flex;
   flex-direction: column;
+}
+.title_new{
+  font-size: 25px;
+  font-weight: lighter;
+
+}
+.save_button{
+  border: none;
+  border-radius: 2%;
+  background-color: #242323;
+  margin-top: 20px;
+  width: 100px;
+  height: 30px;
+  color: white;
+}
+.save_button:hover{
+  opacity: 0.5;
+}
+.post_form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.datepic{
+  width: 90px;
+  height: 30px;
+  background-color: #323131;
+  font-size: 12px;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+.not_login{
+  align-self: center;
 }
